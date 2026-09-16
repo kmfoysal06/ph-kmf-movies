@@ -7,7 +7,7 @@ export default function Movies() {
     const [searchQuery, setSearchQuery] = useState("");
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('there is a huge error');
+    const [error, setError] = useState('');
 
     const endpoint = "https://api.tvmaze.com/shows";
 
