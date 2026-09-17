@@ -25,7 +25,9 @@ const router = createBrowserRouter([
         ]
     },
 
-]);
+], {
+ basename: "/ph-kmf-movies/"   
+});
 
 function Router() {
     return (
