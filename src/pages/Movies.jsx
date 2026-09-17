@@ -52,36 +52,36 @@ export default function Movies() {
     return loading ? <FullScreenLoading /> : (
         <>
             <div className="flex flex-col w-full max-w-screen-xl">
-                <div className="flex flex-col w-full px-4 py-2 bg-gray-200 rounded-md my-4">
-                    <div className="flex flex-col w-full px-4 py-2 bg-gray-200 rounded-md my-4">
-                        <h2 className="text-2xl font-semibold text-heading mb-4">Search Movies</h2>
+                <div className="flex flex-col w-full px-4 py-2 bg-[#d2773b] md:border-0 border md:rounded-md md:my-4">
+                    <div className="flex flex-col w-full px-4 py-2  bg-[#d2773b] rounded-md my-4">
+                        <h2 className="text-2xl font-semibold text-heading mb-4 text-white">Search Movies</h2>
                         <div className="flex gap-2 items-center w-full">
                             <form onSubmit={handleSearch} className="flex gap-2 items-center w-full">
-                            <input      
-                                 type="text"
-                                 placeholder="Search for movies..."
-                                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                value={searchQuery}
-                                onChange={(e) => setSearchQuery(e.target.value)}
-                             />
-                            <button type="submit" className="w-max cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                Search
-                            </button>
+                                <input
+                                    type="text"
+                                    placeholder="Search for movies..."
+                                    className="w-full px-4 py-2 border border-gray-300 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                />
+                                <button type="submit" className="w-max cursor-pointer bg-gray-100 hover:bg-gray-200 text-black font-medium py-2 px-4 rounded">
+                                    Search
+                                </button>
                             </form>
-                    
+
                         </div>
                     </div>
                 </div>
-                {error && 
+                {error &&
                     (
-                        <div className="flex flex-col w-full px-4 py-2 bg-gray-200 rounded-md my-4">
-                            <div className="text-red-500 text-md font-medium">{error}</div>
+                        <div className="flex flex-col w-full px-4 py-2 bg-[#f00] border border-t-0 border-bottom md:rounded-md md:my-4">
+                            <div className="text-white text-md font-medium">{error}</div>
                         </div>
                     )
                 }
 
-                <div className="flex flex-col w-full px-4 py-2 bg-gray-200 rounded-md my-4">
-                    <h2 className="text-2xl font-semibold text-heading mb-4">All Movies</h2>
+                <div className="flex flex-col w-full px-4 py-2 bg-[#d2773b] md:rounded-md md:my-4">
+                    <h2 className="text-2xl font-semibold text-heading mb-4 text-white my-4">All Movies</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         {movies.map((movie) => (<MovieCard key={movie.id} movie={movie} />))}
                     </div>

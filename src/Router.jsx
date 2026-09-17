@@ -7,26 +7,30 @@ import MainLayout from "./layouts/MainLayout";
 import Movies from "./pages/Movies";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    Component: MainLayout,
-    children: [
-        {
-            index: true, Component: Home
-        },
-        {
-            path: "/movies",
-            Component: Movies,
-        },
-    ]
-  },
+    {
+        path: "/",
+        Component: MainLayout,
+        children: [
+            {
+                index: true, Component: Home
+            },
+            {
+                path: "/movies",
+                Component: Movies,
+            },
+            {
+                path: "*",
+                element: <h1>404 | Not Found.</h1>
+            }
+        ]
+    },
 
 ]);
 
 function Router() {
-  return (
-      <RouterProvider router={router} />
-  )
+    return (
+        <RouterProvider router={router} />
+    )
 }
 
 export default Router
