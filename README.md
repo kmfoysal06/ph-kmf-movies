@@ -8,4 +8,5 @@ KMF Movies is a web application that provides users with detailed information ab
 ## API
 The application fetches movie data from the [TVMaze API](https://www.tvmaze.com/api). This API provides comprehensive information about movies and TV shows, including ratings, summaries, and cast details.
 
-## Live Link: [KMF Movies](https://kmfmovies.vercel.app/)
+## Live Link: [KMF Movies - Vercel](https://kmfmovies.vercel.app/)
+## Live Link Secondary: [KMF Movies - Github Pages](https://kmfoysal06.github.io/ph-kmf-movies/)
