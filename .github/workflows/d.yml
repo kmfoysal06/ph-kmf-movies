@@ -46,7 +46,9 @@ jobs:
         run: pnpm install --frozen-lockfile # 3. Equivalent to 'npm ci' for strict CI builds
 
       - name: Build Project
-        run: pnpm run build # 4. Uses pnpm to build the Vite bundle
+        run: |
+          pnpm run build # 4. Uses pnpm to build the Vite bundle
+          cp dist/index.html dist/404.html 
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
